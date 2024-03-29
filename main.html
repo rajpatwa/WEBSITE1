@@ -1,0 +1,707 @@
+<doctype! html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>main</title>
+        <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            font-family: sans-serif;
+        }
+        .background{
+            height: 70vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.61),rgba(0, 0, 0, 0.61)),url(https://c0.wallpaperflare.com/preview/663/421/289/forest-nature-dark-clouds.jpg);
+            background-position: center;
+            background-size: cover;
+            
+        }
+        .content{
+            width: 100%;
+            position:absolute;
+            top:35%;
+            transform: translateY(-50%);
+            text-align: center;
+            color: white;
+        }
+        .content h1{
+            font-size: 70px;
+           margin-top: 80px;
+        }
+        .content p{
+            margin: 15px auto; 
+            font-weight: bold;
+            line-height: 25px;
+            
+        }
+        .logout{
+            float:right;
+            margin-top: 4px;
+            margin-bottom: 0px;
+            position: relative;
+        }
+        .navbar{
+            width:90%;
+            margin:auto;
+            padding:35px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo{
+            color:white;
+            font-size: 50px;
+        }
+        .navbar ul li{
+            list-style: none;
+            display:inline-block;
+            margin:0 20px;
+            position: relative;
+        }
+        .navbar ul li a{
+            text-decoration: none;
+            text-transform: uppercase;
+            color: white;
+        }
+        .navbar ul li::after {
+            content: '';
+            height: 3px;
+            width:0;
+            background: #009688;
+            position:absolute;
+            left:0;
+            bottom:-5px;
+            transition: 0.3s;
+        }
+        .navbar ul li:hover::after {
+          width:100% ;  
+        }
+        
+        
+        button{
+            width: 200px;
+            padding: 15px 0;
+            text-align: center;
+            margin: 20px 10px;
+            border-radius: 25px;
+            font-weight: bold;
+            border: 2px solid #009688;
+            background: transparent;
+            color: white;
+            cursor: pointer;
+            position:relative;
+            overflow:hidden;
+       }
+        span{
+            background: #009688;
+            height: 100%;
+            width:0;
+            border-radius: 25px;
+            position:absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -2;
+            transition: 0.3s;
+            
+        }
+        button:hover span{
+            width: 100%;
+        }
+        button:hover{
+            border: none;
+        }
+        .heading{
+            text-align: center;
+            font-size: 60px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            margin: 50px;
+        }
+        .para{
+            margin-left: 30px;
+            font-family: sans-serif;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .container{
+ 
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            
+        }
+        .box{
+            height: 450px;
+            width: 300px;
+            text-wrap: wrap;
+            background-color: white;
+            overflow: hidden;
+            transition:0.3s ease;
+            margin: 20px;
+          
+        }
+        .box:hover{
+            transform: scale(1.05);
+        }
+        .box img{
+            width: 300px;
+            height:200px;
+            border-radius: 10px;
+        }
+        .boxhead{
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            margin: 20px;
+        }
+        .boxpara{
+            margin: 6px;
+        }
+        .bgimg2{
+                background-color: rgba(0, 255, 255, 0.342);
+        }
+            .contacth3{
+                margin: auto;
+                font-size: 50px;
+                text-align: center;
+                background-color: rgba(0, 0, 0, 0.801) ;
+                color: azure;
+                height: 80px;
+                border-radius: 5px;
+            }
+    
+      .contactp{
+        margin-top: 0%;
+        align-items: center;
+        margin: auto;
+       background-color: rgba(0, 0, 0, 0.349);
+       border-radius: 15px;
+       padding:12px ;
+       color: azure;
+        text-align: center;
+        font-family: sans-serif;
+       width: 50%;
+       height: 225px;
+      }
+      footer{
+        color: rgb(0, 0, 0);
+        margin: 0%;
+        font-family: sans-serif;
+        text-align: center;
+     }
+     .quote{
+        margin-top: 50px;
+        height: 500px;
+        width: 100%;
+        background-color: rgba(128, 128, 128, 0.199);
+     }
+     .quote img{
+        margin: 50px;
+        height: 100px;
+        width:100;
+        border-radius: 50%;
+        float: left;
+     }
+     .quote h2{
+        margin-left: 50px;
+        margin-right: 50px;
+        font-family: cursive;
+        float: left;
+     }
+     .quote p{
+        text-align: center;
+        
+        font-weight: bold;
+     }
+     .topic{
+        font-family: sans-serif;
+        font-size: 30px;
+        text-align: center;
+        
+      }
+      .p1{
+        font-family: sans-serif;
+        font-size: 40;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 0%;
+      }
+      .para{
+        font-family: sans-serif;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 0%;
+        font-size: 20px;
+      }
+      .main{
+        float: left;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 40px;
+        
+       
+     }
+     .main1{
+float: left;
+margin-right: 30px;
+margin-bottom: 30px;
+margin-top: 30px;
+}
+     .p3{
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 40px;
+        font-weight: bold;
+        color: #7cf52c;
+        margin-bottom: 0px;
+        
+     }
+     .p5{
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 40px;
+        font-weight: bold;
+        color: #009688;
+        margin-bottom: 20px;
+     }
+     .p4{
+        margin-left: 50px;
+        float: left;
+        font-family: sans-serif;
+        font-size: 40;
+        font-weight: bold;
+        color: rgba(255, 0, 0, 0.753);
+     }
+     .p2{
+        font-family: sans-serif;
+        font-size: 60;
+        font-weight: bold;
+        margin-left: 10px;
+        margin-bottom: 0%;
+        text-align: center;
+        
+      }
+  
+     .main img{
+        height:200px;
+        width: 400px;
+        border-radius: 10px;
+     }
+     .cont{
+        width: 100%;
+        height: 250px;
+     }
+      .bg1{
+    background-color: rgba(114, 239, 255, 0.336);
+    
+   
+    }
+    .bgyes{
+    background-color: rgba(114, 239, 255, 0.336);
+    height: 720px;
+   
+    }
+    .bgnon{
+   
+    height: 610px;
+   
+    }
+    .joinbg{
+        background-color: rgba(0, 255, 255, 0.61);
+    }
+    .main1 img{
+    width: 350px;
+    height: 230px;
+    border-radius: 15px;
+    margin-left: 60px;
+    margin-right: 0%;
+    transition:0.3s ease;
+    }   
+
+    .main1 img:hover{
+        transform: scale(1.05);
+    }
+    table {
+            
+            width: 98%;
+            margin-left:20px;
+        }
+         td {
+            padding-bottom: 80px;
+            text-align: left;
+        }
+       
+        
+        </style>
+    </head>
+    <body>
+        <div class="background">
+            <div class="navbar">
+                <h1 class="logo">travify</h1>
+                <ul>
+                    <li><a href="#TOURS">Tours</a></li>
+                    <li><a href="#EVENTS">events</a></li>
+                    <li><a href="#MEMORIES">memories</a></li>
+                    <li><a href="#CONTACT US">contact us</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <h1>RAJ TOURS AND TRAVELS</h1>
+                <P>EXPLORING THE WORLD</P><br>
+                <div>
+                    <a href="#CONTACT US"><button type="button"><span></span><h3><b>PLAN  A  TOUR ?</b></h3></button></a>
+                </div>
+            </div> 
+        </div>
+        
+        <br><br>
+        <h1 class="heading" id="TOURS">HOLIDAYS</h1>
+        <p class="para"><b>At Raj Tours And Travels,</b> our journey isn't just about the destinations we've visited; it's about the memories we've created, the cultures we've experienced, and the bonds we've forged along the way. Join us as we take a trip down memory lane and revisit some of our most cherished moments from our tours around the globe.</p>
+        <br><br> <br><br>
+        <div class="container">
+            <div class="box">
+                <img src="https://media.shermanstravel.com/952x460_kyoto_istock.jpg">
+                <h3 class="boxhead">Kyoto, Japan</h3>
+                <p class="boxpara">In the heart of Japan, Kyoto captivates visitors with its blend of tradition and modernity. From the iconic torii gates of Fushimi Inari Shrine
+                    to the serene bamboo groves of Arashiyama, each sight evokes a sense of wonder and reverence.
+                </p>
+            </div>
+            <div class="box">
+                <img src="https://www.thediaryofanomad.com/wp-content/uploads/2022/01/2-day-rome-itinerary-colosseum-4.jpg">
+                <h3 class="boxhead">Rome, Italy</h3>
+                <p class="boxpara">In the eternal city of Rome,
+                    history comes alive at every turn. From the grandeur of the Colosseum to the majesty of the
+                     Vatican, each monument tells a story of ancient civilizations and timeless beauty.</p>
+            </div>
+            <div class="box">
+                <img src="https://as1.ftcdn.net/v2/jpg/02/57/95/88/1000_F_257958899_CsWCdwWdl0Fap2PupoYJQeHhsYMk1tv4.jpg">
+                <h3 class="boxhead">Paris, France</h3>
+                <p class="boxpara">Strolling along the Seine River, with the Eiffel Tower illuminating 
+                    the night sky, Paris exudes an undeniable charm. We remember savoring delicate pastries at quaint cafes,
+                     marveling at the intricate architecture of Notre-Dame Cathedral, and losing ourselves in the world-renowned
+                      Louvre Museum. </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="box">
+                <img src="https://www.andbeyond.com/wp-content/uploads/sites/5/Machu-Picchu-in-summer-Peru.jpg">
+                <h3 class="boxhead">Machu Picchu, Peru</h3>
+                <p class="boxpara">High in the Andes Mountains, Machu Picchu stands as a testament
+                    to the ingenuity of the Inca civilization. Trekking along the ancient Inca Trail, we felt the mystical 
+                    allure of this UNESCO World Heritage Site.</p>
+            </div>
+            <div class="box">
+                <img src="https://www.scottsmorraphotography.com/images/xl/Maui-Light-Makena-Cove-Sunrise.jpg">
+                <h3 class="boxhead">Maui, Hawaii</h3>
+                <p class="boxpara">With its stunning beaches, lush rainforests, and scenic drives along the Hana Highway, Maui is a tropical paradise known for its natural beauty and laid-back atmosphere</p>
+            </div>
+           
+        </div>
+        <br><br><br>
+        <hr>
+        <br><br><br>
+        <h2 class="p3">Embracing the Spirit of Adventure</h2><br><br>
+        
+            <h3 class="para"> But perhaps what truly sets our travels apart is the spirit of adventure that permeates every journey. Whether trekking through the Himalayas, diving into the depths of the Great Barrier Reef, or sailing across the azure waters of the Mediterranean, we've embraced the thrill of exploration with open arms.
+            </h3>
+            <br><BR><br><br>
+        <table>
+            <tr>
+                <td><img src="https://krakow.wiki/wp-content/uploads/2021/09/top-10-tourist-attractions-in-europe.jpg" height="300px" width="600px"></td>
+                <td><h2 class="p5" >Journeying through Europe</h2>
+                    <h3 class="para">Our travels through Europe have been nothing short of magical. From the romantic streets of Paris to the historic landmarks of Rome, Europe's diverse landscapes and vibrant cultures have captured our hearts time and time again. We've wandered through the charming cobblestone alleys of Prague, marveled at the stunning architecture of Barcelona, and indulged in the culinary delights of Florence.
+                    </h3>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><h2 class="p5" >  Discovering the Wonders of Asia</h2>
+                    <h3 class="para"> Asia's allure is undeniable, offering a tapestry of sights, sounds, and flavors that ignite the senses. We've been awestruck by the serene beauty of Japan's cherry blossoms, explored the bustling streets of Bangkok, and found solace amidst the tranquil landscapes of Bali. Each destination has revealed a new facet of Asia's rich heritage and boundless charm.
+                    </h3>
+                </td>
+                <td><img src="https://blog.dookinternational.com/images/post-media/sg2MU1685426101.jpg" height="300px" width="600px"></td>
+            </tr>
+            <tr>
+                <td><img src="https://wondrousdrifter.com/wp-content/uploads/2022/08/best-places-in-north-america-to-visit-time-of-year.png" height="300px" width="600px"></td>
+                <td><h2 class="p5">Roaming the Landscapes of the Americas</h2>
+                    <h3 class="para"> From the rugged wilderness of Alaska to the sun-kissed beaches of the Caribbean, the Americas beckon with their diverse landscapes and boundless adventures. We've hiked through the breathtaking vistas of the Grand Canyon, danced to the rhythm of Rio de Janeiro's Carnival, and witnessed the awe-inspiring beauty of Niagara Falls. The Americas never cease to amaze us with their natural wonders and cultural treasures.
+                   </h3>
+                </td>
+            </tr>
+        </table>
+        <br><Br><br><Br>
+        <div class="joinbg"><br><br><br>
+        <h2 class="p2">Join Us on the Journey</h2><br><Br><br><Br>
+        
+        <h3 class="para">As we reminisce about our past adventures, we're filled with gratitude for the countless memories we've made and the friendships we've forged along the way. But the best part? Our journey is far from over. Join us as we continue to explore new horizons, chase new experiences, and create new memories that will last a lifetime.
+        
+        Raj Tours And Travels invites you to embark on your own adventure and discover the wonders of the world. Let's make memories together.
+     </h3>
+     <br><br><br><br><Br>
+        <hr><hr>
+    </div>
+    <div class="quote"><hr>
+        <br>
+        <p>Customer Testimonial</p><br><br>
+        <img src="https://img.freepik.com/premium-photo/portrait-young-boy-professional-look_785361-73.jpg" ><br><BR><br><BR><BR><h3><u><b>-Raj Patwa</b></u></h3>
+        <h2>"We've used Traveler to explore various destinations and experiences, 
+            discovering new opportunities for lorem ipsum dolor sit amet, consectetur
+             adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        </h2>  
+    </div><hr>
+        <h2 class="heading" id="EVENTS">EVENTS</h2>
+        <h1 class="topic">Explore the World with Our Exciting Upcoming Tours</h1><br><br>
+
+        <div class="bg1"><hr><br><br>
+            <p class="p1">Cape Town, South Africa:</p><br><br>
+               <p class="para">
+                   <b><i>Dates: April 1<sup>st</sup>,2024</i><br><br>
+                   
+                   Highlights:<br>
+                   </b>
+               </p>  
+                   <div class="cont">
+                       <div class="main"><img src="https://media-cdn.tripadvisor.com/media/photo-c/768x250/14/10/2e/1e/cape-town.jpg"></div>
+                       <div class="main"><img src="https://imageio.forbes.com/specials-images/imageserve/62186b3906d6e730ff949c9c/Camps-Bay-Cape-Town-Vibrant-Sunset-Twilight-South-Africa/960x0.jpg?format=jpg&width=960"></div>
+                       <div class="main"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/f6/3b/99/bo-kaap.jpg?w=600&h=400&s=1"></div>
+                       
+                   </div>
+               <br>
+               <p class="para">
+                <b>Cape Town promises to mesmerize you with its stunning landscapes, rich history,
+                and vibrant culture. From ancient ruins to modern marvels, there's something for 
+                every type of traveler. Join us as we delve into the heart of Cape Town and uncover
+                 its hidden treasures.
+               </b>
+               </p><br><br><br><br>
+               <hr>
+             </div><br><br>
+               <p class="p1">Dubrovnik, Croatia:</p><br><br>
+               <p class="para">
+                   <b><i>Dates: April 21<sup>st</sup>,2024</i><br><br>
+                   
+                   Highlights:<br>
+                   </b>
+               </p>  
+                   <div class="cont">
+                       <div class="main"><img src="https://cruisecroatia.com/wp-content/uploads/2021/02/Dubrovnik-600x500-1.jpg"></div>
+                       <div class="main"><img src="https://i.natgeofe.com/n/bb9326f9-0cd9-4492-9f4a-b0038d648389/Dubrovnik-adventure-activities_square.jpg"></div>
+                       <div class="main"><img src="https://theplanetd.com/images/Things-to-do-in-Dubrovnik-Croatia.jpg"></div>
+                       
+                   </div>
+               <br>
+               <p class="para">
+                <b>Embark on a journey to Dubrovnik and immerse yourself in
+                    its natural wonders and cultural heritage. Explore pristine beaches,
+                     lush jungles, and bustling markets as you discover the soul of Dubrovnik.
+                      With our expert guides leading the way, you'll experience Dubrovnik like
+                       never before.
+               </b>
+               </p><br><br><br><br>
+               <div class="bg1">
+       
+               <hr><br><br>
+               <p class="p1">Santorini, Greece:</p><br><br>
+               <p class="para">
+                   <b><i>Dates: May 1<sup>st</sup>,2024</i><br><br>
+                   
+                   Highlights:
+                   </b>
+               </p>  
+                   <div class="cont">
+                       <div class="main"><img src="https://a.cdn-hotels.com/gdcs/production18/d1838/041ae6b1-0a88-4c22-a648-53a22dd4a006.jpg?impolicy=fcrop&w=800&h=533&q=medium"></div>
+                       <div class="main"><img src="https://lp-cms-production.imgix.net/2021-05/shutterstockRF_1563449509.jpg?auto=format&w=1440&h=810&fit=crop&q=75"></div>
+                       <div class="main"><img src="https://transform.nws.ai/https%3A//cdn.thenewsroom.io/platform/story_media/1288797882/1036361536_oPBFLkx/w_1200,c_limit/"></div>
+                       
+                   </div>
+               <br>
+               <p class="para">
+                <b>Prepare to be enchanted by the charm and beauty of Santorini. 
+                   From majestic mountains to serene lakes, Santorini captivates 
+                   visitors with its breathtaking scenery and warm hospitality. Join us
+                    on an unforgettable journey as we uncover the hidden gems of Santorini.
+               </b>
+               </p><br><br><br><br><hr><hr></div><br><br><br><br><br><Br>
+               <b><h2 class="para"><u><i><h1>At our tour and travel company,</h1></i></u> <br>we believe that the essence of our journeys lies not only 
+                in the destinations we visit but also in the memories we create and the friendships we form along the way. 
+                As we traverse the globe, exploring vibrant cities, tranquil landscapes, and fascinating cultures, we are constantly
+                 reminded of the profound connections we make with both the people we meet and the places we encounter. Whether it's 
+                 sharing stories over a campfire under the stars, exploring ancient ruins together, or simply enjoying a meal with
+                  newfound friends, these moments of camaraderie and shared experiences are what truly enrich our travels. Each 
+                  destination becomes more than just a spot on the map; it becomes a part of our collective memory, woven into the 
+                  fabric of our journeys and cherished for years to come.</h2></b>
+                  <br><Br><br><Br><br><Br><hr><hr><br><Br>
+               
+             <h2 class="heading" id="MEMORIES">BEAUTIFUL MEMORIES</h2><Br>
+            <p class="para"><b>These are just a few snapshots of our global escapades, each destination offering
+                 a unique tapestry of culture, nature, and adventure. As we reminisce about these
+                  past travels, our passion for curating unforgettable experiences for our clients
+                   only grows stronger. We look forward to many more chapters of exploration, discovery,
+                    and the creation of enduring memories that transcend time and borders.</b></p>
+                    <br><Br><br><Br><br><Br>
+                <div class="bgyes"><br><Br>
+                     <h1 class="p3">EUROPE</h1><br><Br><hr><br>
+                        
+                
+                            <div class="main1">
+                                <img src="https://cdn.forumcomm.com/dims4/default/7978414/2147483647/strip/true/crop/822x548+0+91/resize/840x560!/quality/90/?url=https%3A%2F%2Fforum-communications-production-web.s3.us-west-2.amazonaws.com%2Fbrightspot%2Ff6%2F8e%2Fc12edaa6417489cc3bc4c968007e%2Fgroup-photo-pisa.jpg" alt="1">
+                                
+                            </div>
+                    
+                            <div class="main1">
+                                <img src="https://www.ncl.com/sites/default/files/1000x667europefamilyhero.jpg" alt="1">
+                                
+                            </div>
+                    
+                            <div class="main1">
+                                <img src="https://cdn.tourradar.com/s3/tour/1500x800/128874_5dfa421b91be3.jpg" alt="1">
+                                
+                            </div>
+                    
+                            <div class="main1">
+                                <img src="https://www.twincities.com/wp-content/uploads/2022/06/stp-z-europe-05-1.jpg?w=978" alt="2">
+                                
+                            </div>
+                    
+                            <div class="main1">
+                                <img src="https://www.orminatours.com/wp-content/uploads/2022/09/Italy-Rome-Family-view-across-city-715x477.jpg" alt="">
+                                
+                            </div>
+                            <div class="main1">
+                                <img src="https://www.ncl.com/sites/default/files/1000x667europefamilyhero.jpg" alt="1">
+                                
+                            </div>
+                       <br><Br><br><br><Br><Br><hr>
+                </div><hr><br><Br>
+                <h1 class="p3">ASIA</h1><br><Br><hr><br>
+                <div class="bgnon">
+                    <div class="main1">
+                        <img src="https://c1.wallpaperflare.com/preview/311/376/954/china-great-wall-great-wall.jpg" alt="">
+                       
+                    </div>
+                    <div class="main1">
+                        <img src="https://www.nepalhiking.com/wp-content/uploads/2018/04/things-to-do-in-pokhara-nepal.jpg" alt="">
+                        
+                    </div>
+                    <div class="main1">
+                        <img src="https://media.licdn.com/dms/image/D4D12AQGF2i2yBaaCmw/article-cover_image-shrink_720_1280/0/1700992550038?e=2147483647&v=beta&t=eLovrpyum0NexF4SAZ7RCU5vXb1FfEqoJ4CEVnEmuuI" alt="">
+                        
+                    </div>
+                    <div class="main1">
+                        <img src="https://images.squarespace-cdn.com/content/v1/567acf6ee0327c3145c232b9/1694674507137-VYH4YGWOKT3YNPNBXYRD/April+Festival+Group.JPG" alt="">
+                        
+                    </div>
+                    <div class="main1">
+                        <img src="https://blizin.com/public/images/uploads/tourpackage/family-trip-to-naran-babusar-top-hunza-khunjerab-pass-TP-109-1596532692.webp" alt="">
+                        
+                    </div>  
+                    <div class="main1">
+                        <img src="https://www.nepalhiking.com/wp-content/uploads/2018/04/things-to-do-in-pokhara-nepal.jpg" alt="">
+                        
+                    </div> 
+                </div>
+               <hr>
+                <div class="bgyes"><hr><br><Br>
+                <h1 class="p3">UNITED STATES OF AMERICA</h1><br><Br><hr><br>
+                
+                    <div class="main1">
+                        <img src="https://ik.imgkit.net/3vlqs5axxjf/TW/ik-seo/uploadedImages/Art/2023/0515/T0515USTRAVELDCH1_C_HR/Where%27s-that-U.S.-tourism-secretary%3F-Travel-groups.jpg?tr=w-780%2Ch-440%2Cfo-auto" alt="1">
+                      
+                    </div>
+            
+                    <div class="main1">
+                        <img src="https://media.istockphoto.com/id/1137346074/photo/three-young-people-in-front-of-berlin-reichstag.jpg?s=612x612&w=0&k=20&c=eFc72EBdlkb3Aad2ebwR1ZSprWppPpnqYDDS1ZWwEPE=" alt="1">
+                      
+                    </div>
+            
+                    <div class="main1">
+                        <img src="https://share.america.gov/wp-content/uploads/2019/10/AP_989897053764-2.jpg" alt="1">
+                        
+                    </div>
+            
+                    <div class="main1">
+                        <img src="https://www.hiusa.org/wp-content/uploads/2022/08/IOU-group-chicago-buckingham-fountain-1000x550-min-778x446.jpg" alt="2">
+                      
+                    </div>
+            
+                    <div class="main1">
+                        <img src="https://res.cloudinary.com/worldpackers/image/upload/c_limit,f_auto,q_auto,w_1140/tbunezj1pw5aeqx6nb9h" alt="">
+                      
+                    </div>
+                    <div class="main1">
+                        <img src="https://media.istockphoto.com/id/1137346074/photo/three-young-people-in-front-of-berlin-reichstag.jpg?s=612x612&w=0&k=20&c=eFc72EBdlkb3Aad2ebwR1ZSprWppPpnqYDDS1ZWwEPE=" alt="1">
+                      
+                    </div>
+            
+                <br><Br><br><Br><br><Br><hr>
+            </div><hr><br><Br>
+                <div>
+                    <h1 class="p3">AUSTRALIA</h1><br><Br><hr><br>
+                    
+                        <div class="main1">
+                            <img src="https://www.twu.ca/sites/default/files/styles/landscape_764w_/public/images/2023-05/IMG-20230508-WA0015_1.jpg?h=369d7132&itok=fZzr9-SC" alt="">
+                            
+                        </div>
+                        <div class="main1">
+                            <img src="https://www.straytravel.com/assets/Uploads/Sydney-Gallery-Image.jpeg" alt="">
+                            
+                        </div>
+                        <div class="main1">
+                            <img src="https://lp-cms-production.imgix.net/2022-11/Sydney-Syd-Harbour-Bridge-Opera-House-8.jpg?auto=format&w=1440&h=810&fit=crop&q=75" alt="">
+                            
+                        </div>
+                        <div class="main1">
+                            <img src="https://tourismteacher.com/wp-content/uploads/2023/10/BCH-4.jpg.webp" alt="">
+                            
+                        </div>
+                        <div class="main1">
+                            <img src="https://www.journeysinternational.com/wp-content/uploads/2019/05/australia-hiking-group.jpg" alt="">
+                            
+                        </div>
+                        <div class="main1">
+                            <img src="https://www.straytravel.com/assets/Uploads/Sydney-Gallery-Image.jpeg" alt="">
+                            <br><Br><br><Br> <br><Br><br><Br>
+                        </div>
+                      
+                       
+                    </div>    
+                    
+                    <div>
+                       
+
+                         <p class="p2"> Why Choose Us?</p><br><br><br>
+                         <p class="para">
+                         <b><u>Expert Guides:</b></u> Our experienced guides are passionate about sharing their knowledge and expertise, ensuring you have a memorable and enriching experience.<br>
+                         <b> <u>Small Group Tours:</b></u> Travel in small groups for a more personalized and immersive experience.<br>
+                         <b> <u>Customized Itineraries:</b></u> Tailor-made itineraries to suit your preferences and interests.<br><br><br>
+                    </div>
+               </p><br>
+               <br><Br>
+               <marquee direction="left" scrollamount="15">
+               <i><h1>Don't miss out on the adventure of a lifetime. Book your spot on our upcoming tours today and embark on a journey to remember.</h1></i></b>
+                </marquee>
+                <br><br><br><br><br> 
+        <br><Br><hR><hr>
+               <hr>
+        <div class="bgimg2"><br><br><br><br>
+            <h1 class="contacth3" id="CONTACT US">CONTACT US:</h1><br><br>
+            <p class="contactp"><br>
+            <b>
+              Address : Tinkune-14,Kathmandu,Nepal<br><br>
+              
+              Phone : +977 981186345<br><br>
+              
+              Mobile : +977 9805673632<br><br>
+              
+              Skype : Raj Patwa<br><br>
+              
+              E-Mail: 023neb837@sxc.edu.np<br><br>
+              
+              Website: http://www.rajtuorsandtravells.com/<br><br>
+            </b></p><br><br><br><BR><BR><br>
+            <hr><br><br>
+            <footer >  Developed By:Raj Patwa<br><br><hr></footer>
+            </div>
+    </body>
+</html>
